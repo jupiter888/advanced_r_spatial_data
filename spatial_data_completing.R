@@ -38,7 +38,7 @@ for(i in seq_along(along.with=fls)){
 b=brick(pr)
 plot(b)
 extent(b) = c(range(lon), range(lat))
-ext = extent(praha_dt_wgs)*1.75
+ext = extent(praha_wgs)*1.75
 aux <- as.data.table(t(extract(b, ext)))
 names(aux) = as.character(cellsFromExtent(b[[i]], ext))
 #Date / forcing
